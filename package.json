@@ -19,6 +19,12 @@
   },
   "homepage": "https://github.com/kleells/book-api#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "mongoose": "^6.3.5",
+    "nodemon": "^2.0.16",
+    "npm-check": "^4.1.4"
   }
 }
