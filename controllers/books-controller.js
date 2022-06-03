@@ -51,7 +51,7 @@ books.get('/', (req, res) => {
         })})
 })
 
-// Show page for a book
+// Show page for a book /listBooks
 books.get('/:id', (req, res) => {
     Book.findById(req.params.id)
         .then(foundBook => {
@@ -62,7 +62,7 @@ books.get('/:id', (req, res) => {
         })})
 })
 
-// PUT Route (update book)
+// PUT Route (update book) /updateBook
 books.put('/:id', async (req, res) => {
     await Book.findByIdAndUpdate(req.params.id, req.body)
         .then(foundBook => {
@@ -73,7 +73,7 @@ books.put('/:id', async (req, res) => {
         })})
 })
 
-// POST a book
+// POST a book /addBook
 books.post('/', (req, res) => {
     Book.create(req.body)
     .then(newBook => {
@@ -84,7 +84,7 @@ books.post('/', (req, res) => {
     })})
 })
 
-// DELETE a book
+// DELETE a book /removeBook
 books.delete('/:id', (req, res) => {
     Book.findByIdAndDelete(req.params.id)
         .then(deletedBook => {
